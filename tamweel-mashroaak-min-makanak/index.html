@@ -11,56 +11,34 @@
   <noscript><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
   <![endif]-->
   <style>
-    @font-face {
-      font-family: "Ping AR";
-      src: url("fonts/PingAR-Regular.otf") format("opentype");
-      font-weight: 400; font-style: normal;
-    }
-    @font-face {
-      font-family: "Ping AR";
-      src: url("fonts/PingAR-Medium.otf") format("opentype");
-      font-weight: 500; font-style: normal;
-    }
-    @font-face {
-      font-family: "Ping AR";
-      src: url("fonts/PingAR-Bold.otf") format("opentype");
-      font-weight: 700; font-style: normal;
-    }
-
     :root { color-scheme: light dark; }
-    html, body { margin: 0 !important; padding: 0 !important; width: 100% !important; height: 100% !important; }
-    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family: "Ping AR", Tahoma, Arial, sans-serif !important; }
-    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse !important; }
-    img { border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; display: block; max-width: 100%; height: auto; }
-    div[style*="margin: 16px 0"] { margin: 0 !important; }
+    html, body { margin:0 !important; padding:0 !important; width:100% !important; height:100% !important; }
+    body, table, td, a { -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
+    table, td { mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse !important; }
+    img { border:0; outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; display:block; }
+    div[style*="margin: 16px 0"] { margin:0 !important; }
 
     /* Light mode (default): light backdrop, white card */
-    body, .page-bg { background-color: #eef3fb; }
-    .shell-card { background-color:#ffffff; border:1px solid #e2ebf7; border-radius:24px; box-shadow:0 16px 36px rgba(7, 67, 155, 0.06); }
+    body, .page-bg { background-color:#eef3fb; }
+    .shell-card { background-color:#ffffff; border:1px solid #e2ebf7; box-shadow:0 16px 36px rgba(7,67,155,0.06); }
 
-    /* Dark mode: dark backdrop, the content card stays light so the brand
-       artwork (navy logo, navy title, colored icons) renders cleanly */
+    /* Dark mode: dark backdrop. The artwork is on white, so the card stays
+       white to keep the brand font, colours and RTL exactly as designed. */
     @media (prefers-color-scheme: dark) {
-      body, .page-bg { background-color: #0b1727 !important; }
+      body, .page-bg { background-color:#0b1727 !important; }
       .shell-card { background-color:#ffffff !important; border:1px solid #1f3350 !important; box-shadow:0 16px 40px rgba(0,0,0,0.45) !important; }
       .outer-foot { color:#9fb3cc !important; }
     }
-    /* Outlook.com dark mode */
-    [data-ogsc] body, [data-ogsc] .page-bg { background-color: #0b1727 !important; }
+    [data-ogsc] body, [data-ogsc] .page-bg { background-color:#0b1727 !important; }
     [data-ogsc] .shell-card { background-color:#ffffff !important; border:1px solid #1f3350 !important; }
     [data-ogsc] .outer-foot { color:#9fb3cc !important; }
 
-    @media screen and (max-width: 620px) {
-      .wrapper { width: 100% !important; }
-      .gutter { padding-left: 18px !important; padding-right: 18px !important; }
-      .logo-img { width: 130px !important; }
-      .h1 { font-size: 26px !important; }
-      .shell-card { border-radius: 20px !important; }
-      .feature-cell { display:block !important; width:100% !important; padding:0 0 10px 0 !important; }
-      .pill-text { font-size: 17px !important; }
-    }
+    .slice { width:100%; max-width:600px; height:auto; }
+    .preheader { display:none !important; visibility:hidden; opacity:0; color:transparent; height:0; width:0; overflow:hidden; mso-hide:all; }
 
-    .preheader { display: none !important; visibility: hidden; opacity: 0; color: transparent; height: 0; width: 0; overflow: hidden; mso-hide: all; }
+    @media screen and (max-width:620px) {
+      .wrapper { width:100% !important; }
+    }
   </style>
 </head>
 
@@ -72,204 +50,29 @@
       <td align="center" style="padding:28px 12px;">
         <table role="presentation" width="600" border="0" cellspacing="0" cellpadding="0" class="wrapper" style="max-width:600px; width:100%;">
           <tr>
-            <td class="shell-card">
-              <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
-
-                <!-- Logo -->
-                <tr>
-                  <td align="center" class="gutter" style="padding:30px 30px 8px;">
-                    <img src="assets/logo.png" width="150" alt="الرائدة | Alraedah" class="logo-img" style="width:150px; height:auto;">
-                  </td>
-                </tr>
-
-                <!-- Greeting -->
-                <tr>
-                  <td class="gutter" style="padding:14px 30px 0;">
-                    <div class="h1" style="color:#00326D; font-size:30px; line-height:1.4; font-weight:700; text-align:center;">
-                      حيّ الله عميل الرائدة
-                    </div>
-                    <div style="color:#5d7da8; font-size:17px; line-height:1.6; font-weight:500; text-align:center; padding-top:6px;">
-                      أحيانًا تجيك
-                    </div>
-                  </td>
-                </tr>
-
-                <!-- Three feature cards -->
-                <tr>
-                  <td class="gutter" style="padding:22px 26px 4px;">
-                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
-                      <tr>
-                        <td class="feature-cell" width="33.33%" valign="top" style="padding:0 6px;">
-                          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #e2ebf7; border-radius:14px;">
-                            <tr><td align="center" style="padding:16px 8px;">
-                              <img src="assets/pin.png" width="44" alt="" style="width:44px; height:auto; margin:0 auto 8px;">
-                              <div style="color:#07439B; font-size:14px; font-weight:700; text-align:center;">فرصة توسّع</div>
-                            </td></tr>
-                          </table>
-                        </td>
-                        <td class="feature-cell" width="33.33%" valign="top" style="padding:0 6px;">
-                          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #e2ebf7; border-radius:14px;">
-                            <tr><td align="center" style="padding:16px 8px;">
-                              <img src="assets/cart.png" width="44" alt="" style="width:44px; height:auto; margin:0 auto 8px;">
-                              <div style="color:#07439B; font-size:14px; font-weight:700; text-align:center;">أو طلبية جديدة</div>
-                            </td></tr>
-                          </table>
-                        </td>
-                        <td class="feature-cell" width="33.33%" valign="top" style="padding:0 6px;">
-                          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #e2ebf7; border-radius:14px;">
-                            <tr><td align="center" style="padding:16px 8px;">
-                              <img src="assets/gear.png" width="44" alt="" style="width:44px; height:auto; margin:0 auto 8px;">
-                              <div style="color:#07439B; font-size:14px; font-weight:700; text-align:center;">أو احتياج تشغيلي</div>
-                            </td></tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-
-                <!-- Tension line -->
-                <tr>
-                  <td class="gutter" style="padding:20px 30px 0;">
-                    <div style="color:#00326D; font-size:18px; line-height:1.6; font-weight:700; text-align:center;">
-                      لكن نقص السيولة يوقفك
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td align="center" style="padding:14px 0 6px;">
-                    <table role="presentation" border="0" cellspacing="0" cellpadding="0"><tr>
-                      <td style="width:10px;height:10px;background:#3c8dde;border-radius:50%;font-size:0;line-height:0;">&nbsp;</td>
-                      <td style="width:8px;font-size:0;">&nbsp;</td>
-                      <td style="width:10px;height:10px;background:#3c8dde;border-radius:50%;font-size:0;line-height:0;">&nbsp;</td>
-                      <td style="width:8px;font-size:0;">&nbsp;</td>
-                      <td style="width:10px;height:10px;background:#3c8dde;border-radius:50%;font-size:0;line-height:0;">&nbsp;</td>
-                    </tr></table>
-                  </td>
-                </tr>
-
-                <!-- Solution paragraph -->
-                <tr>
-                  <td class="gutter" style="padding:14px 36px 0;">
-                    <div style="color:#3a4a5e; font-size:16px; line-height:1.9; font-weight:500; text-align:center;">
-                      مع الرائدة، تقدر تقدّم على تمويل مشروعك من مكانك بتجربة رقمية بالكامل، وبتمويل يبدأ من
-                    </div>
-                  </td>
-                </tr>
-
-                <!-- Amount pill -->
-                <tr>
-                  <td class="gutter" style="padding:18px 30px 0;">
-                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#07439B; border-radius:14px;">
-                      <tr><td align="center" style="padding:16px 18px;">
-                        <span class="pill-text" style="color:#ffffff; font-size:19px; font-weight:700;">20 ألف ريال ويصل إلى <span style="color:#F1C31B;">مليون ريال</span></span>
-                      </td></tr>
-                    </table>
-                  </td>
-                </tr>
-
-                <!-- Hero card -->
-                <tr>
-                  <td class="gutter" style="padding:24px 30px 0;">
-                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#f5f9ff; border:1px solid #e2ebf7; border-radius:18px;">
-                      <tr><td align="center" style="padding:24px 18px 28px;">
-                        <img src="assets/rocket.png" width="86" alt="" style="width:86px; height:auto; margin:0 auto 6px;">
-                        <img src="assets/title.png" width="280" alt="تمويل مشروعك من مكانك!" style="width:280px; max-width:80%; height:auto; margin:0 auto;">
-                      </td></tr>
-                    </table>
-                  </td>
-                </tr>
-
-                <!-- Steps heading -->
-                <tr>
-                  <td class="gutter" style="padding:28px 30px 0;">
-                    <div style="color:#00326D; font-size:19px; line-height:1.5; font-weight:700; text-align:center;">
-                      وكل اللي تحتاجه:
-                    </div>
-                  </td>
-                </tr>
-
-                <!-- Steps -->
-                <tr>
-                  <td class="gutter" style="padding:16px 30px 0;">
-
-                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #e2ebf7; border-radius:14px; margin-bottom:12px;">
-                      <tr><td align="center" style="padding:16px 18px;">
-                        <div style="color:#3c8dde; font-size:20px; font-weight:700; padding-bottom:6px;">01</div>
-                        <div style="color:#3a4a5e; font-size:15px; line-height:1.7; font-weight:500;">تدخل إلى موقعنا الرسمي: <span style="color:#07439B; font-weight:700;">alraedah.sa</span></div>
-                      </td></tr>
-                    </table>
-
-                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #e2ebf7; border-radius:14px; margin-bottom:12px;">
-                      <tr><td align="center" style="padding:16px 18px;">
-                        <div style="color:#3c8dde; font-size:20px; font-weight:700; padding-bottom:6px;">02</div>
-                        <div style="color:#3a4a5e; font-size:15px; line-height:1.7; font-weight:500;">اضغط على <span style="color:#07439B; font-weight:700;">«سجّل الآن»</span> أعلى الصفحة ثم اختيار <span style="color:#07439B; font-weight:700;">«تسجيل الدخول»</span></div>
-                      </td></tr>
-                    </table>
-
-                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #e2ebf7; border-radius:14px; margin-bottom:12px;">
-                      <tr><td align="center" style="padding:16px 18px;">
-                        <div style="color:#3c8dde; font-size:20px; font-weight:700; padding-bottom:6px;">03</div>
-                        <div style="color:#3a4a5e; font-size:15px; line-height:1.7; font-weight:500;">توجّه إلى قسم <span style="color:#07439B; font-weight:700;">«القروض»</span> من القائمة الجانبية</div>
-                      </td></tr>
-                    </table>
-
-                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #e2ebf7; border-radius:14px;">
-                      <tr><td align="center" style="padding:16px 18px;">
-                        <div style="color:#3c8dde; font-size:20px; font-weight:700; padding-bottom:6px;">04</div>
-                        <div style="color:#3a4a5e; font-size:15px; line-height:1.7; font-weight:500;">ثم اضغط على <span style="color:#07439B; font-weight:700;">«طلب تمويل جديد»</span></div>
-                      </td></tr>
-                    </table>
-
-                  </td>
-                </tr>
-
-                <!-- CTA -->
-                <tr>
-                  <td class="gutter" style="padding:26px 30px 0;">
-                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#07439B; border-radius:14px;">
-                      <tr><td align="center" style="padding:18px;">
-                        <a href="https://alraedah.sa" target="_blank" style="color:#ffffff; font-size:20px; font-weight:700; text-decoration:none;">قدّم من مكانك</a>
-                      </td></tr>
-                    </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="gutter" style="padding:16px 30px 6px;">
-                    <div style="color:#5d7da8; font-size:16px; line-height:1.6; font-weight:500; text-align:center;">
-                      ولا تفوّت أي فرصة لمشروعك
-                    </div>
-                  </td>
-                </tr>
-
-                <!-- Disclaimer / footer -->
-                <tr>
-                  <td class="gutter" style="padding:18px 30px 8px;">
-                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
-                      <tr><td style="border-top:1px solid #e2ebf7; font-size:0; line-height:0;">&nbsp;</td></tr>
-                    </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="gutter" style="padding:6px 30px 4px;">
-                    <p style="margin:0; font-size:11px; line-height:1.8; color:#8a98a8; text-align:center; direction:rtl;">
-                      خاضعة لرقابة وإشراف البنك المركزي السعودي &nbsp;•&nbsp; تطبّق الشروط والأحكام &nbsp;•&nbsp; منتج نقاط البيع
-                    </p>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="gutter" style="padding:4px 30px 26px;">
-                    <p style="margin:0; font-size:12px; line-height:1.9; color:#5d7da8; text-align:center; direction:rtl; font-weight:500;">
-                      alraedah.sa &nbsp;•&nbsp; alraedahFinance &nbsp;•&nbsp; alraedah.finance.sa &nbsp;•&nbsp; 8001249000
-                    </p>
-                  </td>
-                </tr>
-
+            <td class="shell-card" style="border-radius:24px; overflow:hidden;">
+              <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#ffffff;">
+                <tr><td style="padding:0;"><img src="slices/01.png" alt="الرائدة | Alraedah" class="slice" width="600" style="width:100%; max-width:600px; height:auto;"></td></tr>
+                <tr><td style="padding:0;"><img src="slices/02.png" alt="حيّ الله عميل الرائدة — أحيانًا تجيك" class="slice" width="600" style="width:100%; max-width:600px; height:auto;"></td></tr>
+                <tr><td style="padding:0;"><img src="slices/03.png" alt="فرصة توسّع، أو طلبية جديدة، أو احتياج تشغيلي — لكن نقص السيولة يوقفك" class="slice" width="600" style="width:100%; max-width:600px; height:auto;"></td></tr>
+                <tr><td style="padding:0;"><img src="slices/04.png" alt="مع الرائدة تقدّم على تمويل مشروعك من مكانك بتجربة رقمية بالكامل، وبتمويل يبدأ من" class="slice" width="600" style="width:100%; max-width:600px; height:auto;"></td></tr>
+                <tr><td style="padding:0;"><img src="slices/05.png" alt="20 ألف ريال ويصل إلى مليون ريال — تمويل مشروعك من مكانك" class="slice" width="600" style="width:100%; max-width:600px; height:auto;"></td></tr>
+                <tr><td style="padding:0;"><img src="slices/06.png" alt="وكل اللي تحتاجه" class="slice" width="600" style="width:100%; max-width:600px; height:auto;"></td></tr>
+                <tr><td style="padding:0;"><img src="slices/07.png" alt="01 تدخل إلى موقعنا الرسمي: alraedah.sa" class="slice" width="600" style="width:100%; max-width:600px; height:auto;"></td></tr>
+                <tr><td style="padding:0;"><img src="slices/08.png" alt="02 اضغط على سجّل الآن أعلى الصفحة ثم اختيار تسجيل الدخول" class="slice" width="600" style="width:100%; max-width:600px; height:auto;"></td></tr>
+                <tr><td style="padding:0;"><img src="slices/09.png" alt="03 توجّه إلى قسم القروض من القائمة الجانبية" class="slice" width="600" style="width:100%; max-width:600px; height:auto;"></td></tr>
+                <tr><td style="padding:0;"><img src="slices/10.png" alt="04 ثم اضغط على طلب تمويل جديد" class="slice" width="600" style="width:100%; max-width:600px; height:auto;"></td></tr>
+                <tr><td style="padding:0;">
+                  <a href="https://alraedah.sa" target="_blank" style="text-decoration:none;">
+                    <img src="slices/11.png" alt="قدّم من مكانك — ولا تفوّت أي فرصة لمشروعك" class="slice" width="600" style="width:100%; max-width:600px; height:auto;">
+                  </a>
+                </td></tr>
+                <tr><td style="padding:0;"><img src="slices/12.png" alt="خاضعة لرقابة وإشراف البنك المركزي السعودي • تطبّق الشروط والأحكام • منتج نقاط البيع — alraedah.sa • alraedahFinance • alraedah.finance.sa • 8001249000" class="slice" width="600" style="width:100%; max-width:600px; height:auto;"></td></tr>
               </table>
             </td>
           </tr>
           <tr>
-            <td class="outer-foot" align="center" style="padding:16px 20px 4px; font-size:11px; line-height:1.6; color:#9aa9bd;">
+            <td class="outer-foot" align="center" style="padding:16px 20px 4px; font-size:11px; line-height:1.6; color:#9aa9bd; font-family:Tahoma,Arial,sans-serif;">
               شركة الرائدة للتمويل
             </td>
           </tr>
