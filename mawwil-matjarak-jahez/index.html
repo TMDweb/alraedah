@@ -24,17 +24,17 @@
 
     /* Light mode (default): light backdrop, white card */
     body, .page-bg { background-color:#eef3fb; }
-    .shell-card { background-color:#ffffff; border:1px solid #e2ebf7; box-shadow:0 16px 36px rgba(7,67,155,0.06); }
+    .shell-card { background-color:#ffffff; box-shadow:0 16px 36px rgba(7,67,155,0.06); }
 
     /* Dark mode: dark backdrop. Card stays white so the navy/blue brand
        palette and the Jahez x Alraedah hero render exactly as designed. */
     @media (prefers-color-scheme: dark) {
       body, .page-bg { background-color:#0b1727 !important; }
-      .shell-card { background-color:#ffffff !important; border:1px solid #1f3350 !important; box-shadow:0 16px 40px rgba(0,0,0,0.45) !important; }
+      .shell-card { background-color:#ffffff !important; box-shadow:0 16px 40px rgba(0,0,0,0.45) !important; }
       .outer-foot { color:#9fb3cc !important; }
     }
     [data-ogsc] body, [data-ogsc] .page-bg { background-color:#0b1727 !important; }
-    [data-ogsc] .shell-card { background-color:#ffffff !important; border:1px solid #1f3350 !important; }
+    [data-ogsc] .shell-card { background-color:#ffffff !important; }
     [data-ogsc] .outer-foot { color:#9fb3cc !important; }
 
     .preheader { display:none !important; visibility:hidden; opacity:0; color:transparent; height:0; width:0; overflow:hidden; mso-hide:all; }
@@ -59,7 +59,7 @@
       <td align="center" style="padding:28px 12px;">
         <table role="presentation" width="600" border="0" cellspacing="0" cellpadding="0" class="wrapper" style="max-width:600px; width:100%;">
           <tr>
-            <td class="shell-card" style="border-radius:24px;">
+            <td class="shell-card" style="border-radius:24px; overflow:hidden;">
               <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
 
                 <!-- Hero: Jahez x Alraedah key visual (both logos + headline baked in) -->
