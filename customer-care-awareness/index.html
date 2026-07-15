@@ -11,71 +11,197 @@
   <noscript><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
   <![endif]-->
   <style>
+    @font-face { font-family:"Ping AR"; src:url("fonts/PingAR-Regular.otf") format("opentype"); font-weight:400; font-style:normal; }
+    @font-face { font-family:"Ping AR"; src:url("fonts/PingAR-Medium.otf") format("opentype"); font-weight:500; font-style:normal; }
+    @font-face { font-family:"Ping AR"; src:url("fonts/PingAR-Bold.otf") format("opentype"); font-weight:700; font-style:normal; }
+
     :root { color-scheme:light dark; }
     html, body { margin:0 !important; padding:0 !important; width:100% !important; min-height:100% !important; }
-    body, table, td, a { -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
+    body, table, td, a, p, h1, h2 { -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
     table, td { mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse !important; }
     img { display:block; border:0; outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; }
+    a { text-decoration:none; }
     div[style*="margin: 16px 0"] { margin:0 !important; }
 
     body, .page-bg { background-color:#eef3fb; }
-    .shell-card {
-      background-color:#ffffff;
-      border:1px solid #e2ebf7;
-      box-shadow:0 16px 36px rgba(7,67,155,0.06);
-    }
-    .slice { width:100%; max-width:600px; height:auto; }
-    .preheader {
-      display:none !important;
-      visibility:hidden;
-      opacity:0;
-      color:transparent;
-      height:0;
-      width:0;
-      overflow:hidden;
-      mso-hide:all;
-    }
+    .shell-card, .content-table, .white-surface { background-color:#ffffff; }
+    .shell-card { border:1px solid #e2ebf7; box-shadow:0 16px 36px rgba(7,67,155,0.06); }
+    .preheader { display:none !important; visibility:hidden; opacity:0; color:transparent; height:0; width:0; overflow:hidden; mso-hide:all; }
+    .ltr { direction:ltr; unicode-bidi:embed; }
 
-    @media (prefers-color-scheme: dark) {
+    @media (prefers-color-scheme:dark) {
       body, .page-bg { background-color:#0b1727 !important; }
-      .shell-card {
-        background-color:#ffffff !important;
-        border-color:#1f3350 !important;
-        box-shadow:0 16px 40px rgba(0,0,0,0.45) !important;
-      }
-      .artwork-table, .artwork-cell { background-color:#ffffff !important; }
+      .shell-card { background-color:#ffffff !important; border-color:#1f3350 !important; box-shadow:0 16px 40px rgba(0,0,0,0.45) !important; }
+      .content-table, .white-surface { background-color:#ffffff !important; }
+      .brand-blue { color:#07439b !important; }
+      .body-copy { color:#25282d !important; }
+      .body-strong { color:#111820 !important; }
+      .warning-card { background-color:#f2f2f2 !important; }
+      .warning-copy { color:#34373c !important; }
+      .fee-card { background-color:#ffffff !important; border-color:#01b3e3 !important; }
+      .contact-bar { background-color:#07439b !important; }
+      .contact-bar-copy { color:#ffffff !important; }
+      .contact-accent { color:#01b3e3 !important; }
+      .contact-value { color:#25282d !important; }
+      .footer-copy { color:#4f76ab !important; }
       .outer-foot { color:#9fb3cc !important; }
     }
     [data-ogsc] body, [data-ogsc] .page-bg { background-color:#0b1727 !important; }
-    [data-ogsc] .shell-card { background-color:#ffffff !important; border-color:#1f3350 !important; }
-    [data-ogsc] .artwork-table, [data-ogsc] .artwork-cell { background-color:#ffffff !important; }
-    [data-ogsc] .outer-foot { color:#9fb3cc !important; }
+    [data-ogsc] .shell-card, [data-ogsc] .content-table, [data-ogsc] .white-surface { background-color:#ffffff !important; }
+    [data-ogsc] .brand-blue { color:#07439b !important; }
+    [data-ogsc] .body-copy { color:#25282d !important; }
+    [data-ogsc] .warning-card { background-color:#f2f2f2 !important; }
+    [data-ogsc] .warning-copy { color:#34373c !important; }
+    [data-ogsc] .contact-bar { background-color:#07439b !important; }
+    [data-ogsc] .contact-bar-copy { color:#ffffff !important; }
+    [data-ogsc] .contact-accent { color:#01b3e3 !important; }
+    [data-ogsc] .contact-value { color:#25282d !important; }
 
     @media screen and (max-width:620px) {
       .wrapper { width:100% !important; }
       .page-gutter { padding:12px 8px !important; }
       .shell-card { border-radius:18px !important; }
+      .content-gutter { padding-left:24px !important; padding-right:24px !important; }
+      .hero-title { font-size:27px !important; line-height:1.48 !important; }
+      .body-copy { font-size:16px !important; line-height:1.9 !important; }
+      .contact-bar-copy { font-size:16px !important; }
+      .contact-heading { font-size:22px !important; }
+      .contact-value { font-size:20px !important; }
     }
   </style>
 </head>
 
 <body style="margin:0; padding:0; direction:rtl; background-color:#eef3fb;">
-  <div class="preheader">حمايةً لك، تعامل مع الرائدة مباشرة دون وسطاء، ولا تحوّل أي رسوم إلا إلى حسابات الرائدة للتمويل.</div>
+  <div class="preheader">حمايةً لك، تعامل مع الرائدة مباشرة دون وسطاء، وتواصل معنا عبر قنواتنا الرسمية فقط.</div>
 
-  <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" dir="rtl" class="page-bg" style="width:100%; background-color:#eef3fb;">
+  <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" dir="rtl" bgcolor="#eef3fb" class="page-bg" style="width:100%; background-color:#eef3fb;">
     <tr>
       <td align="center" class="page-gutter" style="padding:28px 12px;">
         <table role="presentation" width="600" border="0" cellspacing="0" cellpadding="0" class="wrapper" style="width:100%; max-width:600px;">
           <tr>
-            <td class="shell-card" bgcolor="#ffffff" style="background-color:#ffffff; border-radius:24px; overflow:hidden;">
-              <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" class="artwork-table" style="width:100%; background-color:#ffffff;">
-                <tr><td class="artwork-cell" bgcolor="#ffffff" style="padding:0; background-color:#ffffff;"><img src="slices/01.png" width="600" class="slice" alt="الرائدة للتمويل — حمايةً لك، تعامل مع الرائدة مباشرة دون وسطاء" style="width:100%; max-width:600px; height:auto;"></td></tr>
-                <tr><td class="artwork-cell" bgcolor="#ffffff" style="padding:0; background-color:#ffffff;"><img src="slices/02.png" width="600" class="slice" alt="الرائدة للتمويل لا تتعامل مع أي وسطاء أو مكاتب خارجية" style="width:100%; max-width:600px; height:auto;"></td></tr>
-                <tr><td class="artwork-cell" bgcolor="#ffffff" style="padding:0; background-color:#ffffff;"><img src="slices/03.png" width="600" class="slice" alt="تعامل مباشرة مع الرائدة للتمويل" style="width:100%; max-width:600px; height:auto;"></td></tr>
-                <tr><td class="artwork-cell" bgcolor="#ffffff" style="padding:0; background-color:#ffffff;"><img src="slices/04.png" width="600" class="slice" alt="جميع الرسوم الإدارية موضحة في عقد التمويل، ولا يتم دفعها نقدًا لأي شخص" style="width:100%; max-width:600px; height:auto;"></td></tr>
-                <tr><td class="artwork-cell" bgcolor="#ffffff" style="padding:0; background-color:#ffffff;"><img src="slices/05.png" width="600" class="slice" alt="التعامل مع الوسطاء قد يعرض بياناتك الشخصية والبنكية لخطر السرقة أو الاستغلال. لأي استفسار تواصل معنا مباشرة عبر قنواتنا الرسمية" style="width:100%; max-width:600px; height:auto;"></td></tr>
-                <tr><td class="artwork-cell" bgcolor="#ffffff" style="padding:0; background-color:#ffffff;"><a href="mailto:care@alraedah.sa" aria-label="راسل خدمة عملاء الرائدة على care@alraedah.sa" style="display:block; text-decoration:none;"><img src="slices/06.png" width="600" class="slice" alt="البريد الإلكتروني: care@alraedah.sa" style="width:100%; max-width:600px; height:auto;"></a></td></tr>
-                <tr><td class="artwork-cell" bgcolor="#ffffff" style="padding:0; background-color:#ffffff;"><a href="tel:8001249000" aria-label="اتصل بدعم الرائدة على 8001249000" style="display:block; text-decoration:none;"><img src="slices/07.png" width="600" class="slice" alt="الدعم الهاتفي: 8001249000 أو 920004495 — الرائدة للتمويل" style="width:100%; max-width:600px; height:auto;"></a></td></tr>
+            <td class="shell-card" bgcolor="#ffffff" style="background-color:#ffffff; border:1px solid #e2ebf7; border-radius:24px; overflow:hidden;">
+              <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" class="content-table" style="width:100%; background-color:#ffffff;">
+
+                <tr>
+                  <td align="center" class="white-surface" bgcolor="#ffffff" style="padding:58px 36px 28px; background-color:#ffffff;">
+                    <img src="assets/logo2026.svg" width="168" alt="الرائدة للتمويل | Alraedah Finance" style="width:168px; max-width:48%; height:auto; margin:0 auto;">
+                  </td>
+                </tr>
+
+                <tr>
+                  <td align="center" class="content-gutter white-surface" bgcolor="#ffffff" style="padding:22px 56px 0; background-color:#ffffff;">
+                    <h1 class="hero-title brand-blue" style="margin:0; color:#07439b; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:32px; line-height:1.48; font-weight:700; text-align:center;">
+                      <span style="display:block;">حمايةً لك.. تعامل مع الرائدة</span>
+                      <span style="display:block;">مباشرة دون وسطاء</span>
+                    </h1>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td align="center" class="white-surface" bgcolor="#ffffff" style="padding:30px 0 0; background-color:#ffffff;">
+                    <table role="presentation" border="0" cellspacing="0" cellpadding="0" dir="ltr">
+                      <tr>
+                        <td bgcolor="#01b3e3" style="width:44px; height:15px; background-color:#01b3e3; border-radius:10px; font-size:0; line-height:0;">&nbsp;</td>
+                        <td style="width:8px; font-size:0; line-height:0;">&nbsp;</td>
+                        <td bgcolor="#01b3e3" style="width:15px; height:15px; background-color:#01b3e3; border-radius:50%; font-size:0; line-height:0;">&nbsp;</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="content-gutter white-surface" bgcolor="#ffffff" style="padding:34px 54px 82px; background-color:#ffffff;">
+                    <p class="body-copy" style="margin:0; color:#25282d; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:20px; line-height:1.7; font-weight:400; text-align:center;">عزيزي العميل</p>
+                    <p class="body-copy" style="margin:18px 0 0; color:#25282d; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:18px; line-height:2; font-weight:400; text-align:center;">
+                      لاحظنا وجود أفراد يدّعون قدرتهم على تسهيل أو تسريع الحصول على تمويل من الرائدة مقابل رسوم. ونود التأكيد أن
+                      <strong class="body-strong" style="color:#111820; font-weight:700;">الرائدة للتمويل لا تتعامل مع أي وسطاء أو مكاتب خارجية.</strong>
+                    </p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="white-surface" bgcolor="#ffffff" style="padding:18px 0 24px; background-color:#ffffff; font-size:0; line-height:0;">
+                    <img src="assets/intermediary-puzzle.png" width="600" alt="قطع مترابطة ترمز إلى التعامل المباشر مع الرائدة" style="width:100%; max-width:600px; height:auto;">
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="content-gutter white-surface" bgcolor="#ffffff" style="padding:8px 32px 0; background-color:#ffffff;">
+                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" class="fee-card" style="width:100%; background-color:#ffffff; border:2px solid #01b3e3; border-radius:22px; border-collapse:separate !important; border-spacing:0;">
+                      <tr>
+                        <td align="center" style="padding:0; font-size:0; line-height:0;">
+                          <table role="presentation" border="0" cellspacing="0" cellpadding="0" style="margin:-27px auto 0;">
+                            <tr>
+                              <td width="54" height="54" align="center" valign="middle" bgcolor="#3b8df1" style="width:54px; height:54px; background-color:#3b8df1; border:5px solid #ffffff; border-radius:19px; color:#ffffff; font-family:Arial,sans-serif; font-size:28px; line-height:44px; font-weight:700;">✓</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="body-copy" style="padding:18px 40px 30px; color:#25282d; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:18px; line-height:2; font-weight:400; text-align:center;">
+                          جميع الرسوم الإدارية موضحة في عقد التمويل، ولا يتم دفعها نقدًا لأي شخص، وإنما تُحوّل مباشرة إلى حسابات الرائدة للتمويل.
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="content-gutter white-surface" bgcolor="#ffffff" style="padding:30px 32px 0; background-color:#ffffff;">
+                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f2f2f2" class="warning-card" style="width:100%; background-color:#f2f2f2; border-radius:22px; border-collapse:separate !important; border-spacing:0;">
+                      <tr>
+                        <td class="body-copy warning-copy" style="padding:30px 38px; color:#34373c; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:18px; line-height:2; font-weight:400; text-align:center;">
+                          التعامل مع الوسطاء قد يعرّض بياناتك الشخصية والبنكية لخطر السرقة أو الاستغلال.
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="content-gutter white-surface" bgcolor="#ffffff" style="padding:30px 32px 0; background-color:#ffffff;">
+                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#07439b" class="contact-bar" style="width:100%; background-color:#07439b; border-radius:32px; border-collapse:separate !important; border-spacing:0;">
+                      <tr>
+                        <td class="contact-bar-copy" style="padding:15px 22px; color:#ffffff; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:18px; line-height:1.55; font-weight:700; text-align:center;">
+                          لأي استفسار، تواصل معنا مباشرة عبر <span class="contact-accent" style="color:#01b3e3;">قنواتنا الرسمية</span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td align="center" class="content-gutter white-surface" bgcolor="#ffffff" style="padding:42px 34px 0; background-color:#ffffff;">
+                    <h2 class="contact-heading brand-blue" style="margin:0; color:#07439b; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:24px; line-height:1.5; font-weight:700; text-align:center;">البريد الإلكتروني</h2>
+                    <p style="margin:5px 0 0; font-family:Arial,Tahoma,sans-serif; font-size:21px; line-height:1.5; text-align:center; direction:ltr;">
+                      <a href="mailto:care@alraedah.sa" class="contact-value" style="color:#25282d; text-decoration:none;">care@alraedah.sa</a>
+                    </p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td align="center" class="content-gutter white-surface" bgcolor="#ffffff" style="padding:30px 34px 0; background-color:#ffffff;">
+                    <h2 class="contact-heading brand-blue" style="margin:0; color:#07439b; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:24px; line-height:1.5; font-weight:700; text-align:center;">الدعم الهاتفي</h2>
+                    <p class="ltr" style="margin:5px 0 0; font-family:Arial,Tahoma,sans-serif; font-size:21px; line-height:1.48; text-align:center;">
+                      <a href="tel:8001249000" class="contact-value" style="color:#25282d; text-decoration:none;">8001249000</a><br>
+                      <a href="tel:920004495" class="contact-value" style="color:#25282d; text-decoration:none;">920004495</a>
+                    </p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="content-gutter white-surface footer-copy" bgcolor="#ffffff" style="padding:52px 26px 24px; background-color:#ffffff; color:#4f76ab; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:11px; line-height:1.8; font-weight:500; text-align:center;">
+                    خاضعة لرقابة وإشراف البنك المركزي السعودي&nbsp;&nbsp;•&nbsp;&nbsp;تطبق الشروط والأحكام
+                    <br>
+                    <a href="https://alraedah.sa" style="color:#3479bc; text-decoration:none;">alraedah.sa</a>
+                    &nbsp;&nbsp;•&nbsp;&nbsp;
+                    <a href="https://x.com/alraedahFinance" style="color:#3479bc; text-decoration:none;">alraedahFinance</a>
+                    &nbsp;&nbsp;•&nbsp;&nbsp;
+                    <a href="https://www.instagram.com/alraedah.finance.sa/" style="color:#3479bc; text-decoration:none;">alraedah.finance.sa</a>
+                    &nbsp;&nbsp;•&nbsp;&nbsp;
+                    <a href="tel:8001249000" style="color:#3479bc; text-decoration:none;">8001249000</a>
+                  </td>
+                </tr>
               </table>
             </td>
           </tr>
