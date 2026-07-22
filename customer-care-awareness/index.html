@@ -29,6 +29,7 @@
     .preheader { display:none !important; visibility:hidden; opacity:0; color:transparent; height:0; width:0; overflow:hidden; mso-hide:all; }
     .ltr { direction:ltr; unicode-bidi:embed; }
     .social-icon { width:15px; height:15px; }
+    .intro-card { background-color:#f8fbff; border:1px solid #d5e4f3; }
 
     @media (prefers-color-scheme:dark) {
       body, .page-bg { background-color:#0b1727 !important; }
@@ -37,6 +38,7 @@
       .brand-blue { color:#07439b !important; }
       .body-copy { color:#25282d !important; }
       .body-strong { color:#111820 !important; }
+      .intro-card { background-color:#f8fbff !important; border-color:#d5e4f3 !important; }
       .warning-card { background-color:#fef9e3 !important; border-color:#f7df5f !important; }
       .warning-copy { color:#00326d !important; }
       .fee-card { background-color:#ffffff !important; border-color:#01b3e3 !important; }
@@ -51,6 +53,7 @@
     [data-ogsc] .shell-card, [data-ogsc] .content-table, [data-ogsc] .white-surface { background-color:#ffffff !important; }
     [data-ogsc] .brand-blue { color:#07439b !important; }
     [data-ogsc] .body-copy { color:#25282d !important; }
+    [data-ogsc] .intro-card { background-color:#f8fbff !important; border-color:#d5e4f3 !important; }
     [data-ogsc] .warning-card { background-color:#fef9e3 !important; border-color:#f7df5f !important; }
     [data-ogsc] .warning-copy { color:#00326d !important; }
     [data-ogsc] .contact-bar { background-color:#07439b !important; }
@@ -113,17 +116,23 @@
                 </tr>
 
                 <tr>
-                  <td class="content-gutter white-surface" bgcolor="#ffffff" style="padding:34px 54px 24px; background-color:#ffffff;">
-                    <p class="body-copy" style="margin:0; color:#25282d; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:20px; line-height:1.7; font-weight:400; text-align:center;">عزيزي العميل</p>
-                    <p class="body-copy" style="margin:18px 0 0; color:#25282d; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:18px; line-height:2; font-weight:400; text-align:center;">
-                      لاحظنا وجود أفراد يدّعون قدرتهم على تسهيل أو تسريع الحصول على تمويل من الرائدة مقابل رسوم. ونود التأكيد أن
-                      <strong class="body-strong" style="color:#111820; font-weight:700;">الرائدة للتمويل لا تتعامل مع أي وسطاء أو مكاتب خارجية.</strong>
-                    </p>
+                  <td class="content-gutter white-surface" bgcolor="#ffffff" style="padding:34px 44px 24px; background-color:#ffffff;">
+                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f8fbff" class="intro-card" style="width:100%; background-color:#f8fbff; border:1px solid #d5e4f3; border-radius:18px; border-collapse:separate !important; border-spacing:0;">
+                      <tr>
+                        <td style="padding:22px 24px 26px;">
+                          <p class="body-copy" style="margin:0; color:#25282d; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:20px; line-height:1.7; font-weight:400; text-align:center;">عزيزي العميل</p>
+                          <p class="body-copy" style="margin:18px 0 0; color:#25282d; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:18px; line-height:2; font-weight:400; text-align:center;">
+                            لاحظنا وجود أفراد يدّعون قدرتهم على تسهيل أو تسريع الحصول على تمويل من الرائدة مقابل رسوم. ونود التأكيد أن
+                            <strong class="body-strong" style="color:#111820; font-weight:700;">الرائدة للتمويل لا تتعامل مع أي وسطاء أو مكاتب خارجية.</strong>
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
                   </td>
                 </tr>
 
                 <tr>
-                  <td class="white-surface" bgcolor="#ffffff" style="padding:0 0 20px; background-color:#ffffff; font-size:0; line-height:0;">
+                  <td class="white-surface" bgcolor="#ffffff" style="padding:0 0 56px; background-color:#ffffff; font-size:0; line-height:0;">
                     <img src="assets/mockup-client-20260722.png" width="600" alt="هاتف يعرض رسالة من وسيط مجهول يطلب رسومًا مقابل تمويل" style="display:block; width:100%; max-width:600px; height:auto; margin:0 auto;">
                   </td>
                 </tr>
