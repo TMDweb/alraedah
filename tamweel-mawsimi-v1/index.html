@@ -6,7 +6,7 @@
   <meta name="x-apple-disable-message-reformatting">
   <meta name="color-scheme" content="light dark">
   <meta name="supported-color-schemes" content="light dark">
-  <title>الموسم فرصة لمشروعك — التمويل الموسمي من الرائدة</title>
+  <title>الموسم فرصة لمشروعك | التمويل الموسمي من الرائدة</title>
   <!--[if mso]>
   <noscript><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
   <![endif]-->
@@ -17,167 +17,149 @@
 
     :root { color-scheme:light dark; }
     html, body { margin:0 !important; padding:0 !important; width:100% !important; min-height:100% !important; }
-    body, table, td, a, p, h1, h2, div { -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
+    body, table, td, a, p, h1, div { -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
     table, td { mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse !important; }
     img { display:block; border:0; outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; }
     a { text-decoration:none; }
     div[style*="margin: 16px 0"] { margin:0 !important; }
 
     body, .page-bg { background-color:#eef3fb; }
-    .shell-card, .white-surface { background-color:#ffffff; }
-    .shell-card { border:1px solid #e2ebf7; box-shadow:0 16px 36px rgba(7,67,155,0.06); }
-    .hero-band { background-color:#07439b; background-image:linear-gradient(160deg,#0a4eb0 0%,#07439b 45%,#00326d 100%); }
+    .poster { background-color:#07439b; background-image:linear-gradient(158deg,#0b52b8 0%,#07439b 46%,#00285a 100%); }
     .preheader { display:none !important; visibility:hidden; opacity:0; color:transparent; height:0; width:0; overflow:hidden; mso-hide:all; }
-    .social-icon { width:15px; height:15px; }
 
+    /* the poster is navy in both themes. only the outer canvas changes. */
     @media (prefers-color-scheme:dark) {
-      body, .page-bg { background-color:#0b1727 !important; }
-      .shell-card { background-color:#ffffff !important; border-color:#1f3350 !important; box-shadow:0 16px 40px rgba(0,0,0,0.45) !important; }
-      .white-surface { background-color:#ffffff !important; }
-      .hero-band { background-color:#07439b !important; }
-      .hero-copy { color:#ffffff !important; }
-      .hero-accent { color:#01b3e3 !important; }
-      .brand-blue { color:#07439b !important; }
-      .body-copy { color:#25282d !important; }
-      .amount-card { background-color:#f4f9ff !important; border-color:#d5e4f3 !important; }
-      .cta-btn { background-color:#07439b !important; }
-      .cta-btn a, .cta-btn span { color:#ffffff !important; }
-      .footer-copy { color:#4f76ab !important; }
-      .footer-department { color:#7d8fa4 !important; }
+      body, .page-bg { background-color:#050d18 !important; }
+      .poster { background-color:#07439b !important; }
+      .on-navy { color:#ffffff !important; }
+      .on-navy-soft { color:#bcd6f5 !important; }
+      .rule { background-color:#01b3e3 !important; }
+      .cta-btn { background-color:#ffffff !important; }
+      .cta-btn a { color:#07439b !important; }
+      .foot-link { color:#a9c9ee !important; }
     }
-    [data-ogsc] body, [data-ogsc] .page-bg { background-color:#0b1727 !important; }
-    [data-ogsc] .shell-card, [data-ogsc] .white-surface { background-color:#ffffff !important; }
-    [data-ogsc] .hero-band { background-color:#07439b !important; }
-    [data-ogsc] .hero-copy { color:#ffffff !important; }
-    [data-ogsc] .hero-accent { color:#01b3e3 !important; }
-    [data-ogsc] .brand-blue { color:#07439b !important; }
-    [data-ogsc] .body-copy { color:#25282d !important; }
-    [data-ogsc] .amount-card { background-color:#f4f9ff !important; border-color:#d5e4f3 !important; }
-    [data-ogsc] .cta-btn { background-color:#07439b !important; }
-    [data-ogsc] .cta-btn a, [data-ogsc] .cta-btn span { color:#ffffff !important; }
+    [data-ogsc] body, [data-ogsc] .page-bg { background-color:#050d18 !important; }
+    [data-ogsc] .poster { background-color:#07439b !important; }
+    [data-ogsc] .on-navy { color:#ffffff !important; }
+    [data-ogsc] .on-navy-soft { color:#bcd6f5 !important; }
+    [data-ogsc] .rule { background-color:#01b3e3 !important; }
+    [data-ogsc] .cta-btn { background-color:#ffffff !important; }
+    [data-ogsc] .cta-btn a { color:#07439b !important; }
+    [data-ogsc] .foot-link { color:#a9c9ee !important; }
 
     @media screen and (max-width:620px) {
       .wrapper { width:100% !important; }
       .page-gutter { padding:12px 8px !important; }
-      .shell-card { border-radius:18px !important; }
-      .hero-gutter { padding-left:26px !important; padding-right:26px !important; }
-      .content-gutter { padding-left:24px !important; padding-right:24px !important; }
-      .hero-title { font-size:28px !important; line-height:1.5 !important; }
-      .body-copy { font-size:16px !important; line-height:1.9 !important; }
-      .amount-figure { font-size:44px !important; }
-      .social-cell { padding-left:2px !important; padding-right:2px !important; }
-      .social-label { font-size:8.5px !important; }
+      .poster { border-radius:18px !important; }
+      .gutter { padding-left:26px !important; padding-right:26px !important; }
+      .hero-title { font-size:30px !important; line-height:1.5 !important; }
+      .lede { font-size:17px !important; }
+      .amount { font-size:60px !important; }
+      .unit { font-size:30px !important; }
+      .social-cell { padding-left:3px !important; padding-right:3px !important; }
+      .social-label { font-size:9px !important; }
     }
   </style>
 </head>
 
 <body style="margin:0; padding:0; direction:rtl; background-color:#eef3fb;">
-  <div class="preheader">الموسم فرصة لمشروعك — جهّز مخزونك وفريقك وتشغيلك قبل زيادة الطلب بتمويل موسمي يصل إلى 200,000 ريال.</div>
+  <div class="preheader">الموسم فرصة لمشروعك. جهّز مخزونك وفريقك وتشغيلك قبل زيادة الطلب بتمويل موسمي يصل إلى 200,000 ريال.</div>
 
   <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" dir="rtl" bgcolor="#eef3fb" class="page-bg" style="width:100%; background-color:#eef3fb;">
     <tr>
       <td align="center" class="page-gutter" style="padding:28px 12px;">
         <table role="presentation" width="600" border="0" cellspacing="0" cellpadding="0" class="wrapper" style="width:100%; max-width:600px;">
           <tr>
-            <td class="shell-card" bgcolor="#ffffff" style="background-color:#ffffff; border:1px solid #e2ebf7; border-radius:24px; overflow:hidden;">
+            <td class="poster" bgcolor="#07439b" style="background-color:#07439b; border-radius:24px; overflow:hidden;">
               <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="width:100%;">
 
-                <!-- Navy key-visual hero -->
                 <tr>
-                  <td class="hero-band" bgcolor="#07439b" style="background-color:#07439b;">
-                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="width:100%;">
-                      <tr>
-                        <td class="hero-gutter" style="padding:34px 40px 0;">
-                          <img src="assets/logo2026-white.svg" width="132" alt="الرائدة للتمويل | Alraedah Finance" style="width:132px; max-width:42%; height:auto;">
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="hero-gutter" style="padding:26px 40px 6px;">
-                          <h1 class="hero-title hero-copy" style="margin:0; color:#ffffff; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:33px; line-height:1.55; font-weight:700; text-align:right;">
-                            الموسم <span style="display:inline-block; border:2px solid #ffffff; border-radius:12px; padding:1px 13px 4px;">فرصة</span><img src="assets/cursor.svg" width="24" alt="" style="display:inline-block; width:24px; height:24px; vertical-align:-17px; margin:0 -8px 0 0;"> لمشروعك.
-                          </h1>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="hero-gutter" style="padding:14px 40px 40px;">
-                          <p class="hero-copy" style="margin:0; color:#d4e5fa; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:18px; line-height:2; font-weight:500; text-align:right;">
-                            جهّز مخزونك، فريقك، وتشغيلك قبل زيادة الطلب.
-                          </p>
-                        </td>
-                      </tr>
-                    </table>
+                  <td align="center" class="gutter" style="padding:52px 40px 0;">
+                    <img src="assets/logo2026-white.svg" width="150" alt="الرائدة للتمويل | Alraedah Finance" style="width:150px; max-width:44%; height:auto; margin:0 auto;">
                   </td>
                 </tr>
 
-                <!-- Offer -->
                 <tr>
-                  <td class="content-gutter white-surface" bgcolor="#ffffff" style="padding:40px 44px 0; background-color:#ffffff;">
-                    <p class="body-copy" style="margin:0; color:#25282d; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:19px; line-height:1.9; font-weight:500; text-align:center;">
-                      مع <strong class="brand-blue" style="color:#07439b; font-weight:700;">التمويل الموسمي من الرائدة</strong>
+                  <td align="center" class="gutter" style="padding:44px 44px 0;">
+                    <h1 class="hero-title on-navy" style="margin:0; color:#ffffff; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:36px; line-height:1.55; font-weight:700; text-align:center;">
+                      الموسم <span style="display:inline-block; border:2px solid #ffffff; border-radius:12px; padding:1px 14px 4px;">فرصة</span><img src="assets/cursor.svg" width="24" alt="" style="display:inline-block; width:24px; height:24px; vertical-align:-17px; margin:0 -8px 0 0;"> لمشروعك.
+                    </h1>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td align="center" class="gutter" style="padding:18px 52px 0;">
+                    <p class="lede on-navy-soft" style="margin:0; color:#bcd6f5; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:18px; line-height:1.95; font-weight:500; text-align:center;">
+                      جهّز مخزونك، فريقك، وتشغيلك قبل زيادة الطلب.
                     </p>
                   </td>
                 </tr>
 
+                <!-- KV amount lockup -->
                 <tr>
-                  <td class="content-gutter white-surface" bgcolor="#ffffff" style="padding:20px 44px 0; background-color:#ffffff;">
-                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f4f9ff" class="amount-card" style="width:100%; background-color:#f4f9ff; border:1px solid #d5e4f3; border-radius:22px; border-collapse:separate !important; border-spacing:0;">
+                  <td align="center" class="gutter" style="padding:52px 40px 0;">
+                    <p class="on-navy-soft" style="margin:0; color:#bcd6f5; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:18px; line-height:1.5; font-weight:500; text-align:center;">
+                      مع التمويل الموسمي من الرائدة، تمويل يصل إلى
+                    </p>
+                    <p class="amount on-navy" style="margin:12px 0 0; color:#ffffff; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:72px; line-height:1.15; font-weight:700; text-align:center; direction:ltr;">200,000</p>
+                    <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" style="margin:20px auto 0;">
+                      <tr><td class="rule" bgcolor="#01b3e3" style="width:210px; height:10px; background-color:#01b3e3; border-radius:10px; font-size:0; line-height:0;">&nbsp;</td></tr>
+                    </table>
+                    <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" style="margin:22px auto 0;">
+                      <tr><td align="center" style="font-size:0; line-height:0;">
+                        <img src="assets/riyal-white.png" width="50" height="56" alt="ريال" style="display:block; width:50px; height:56px;">
+                      </td></tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td align="center" class="gutter" style="padding:44px 40px 0;">
+                    <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#ffffff" class="cta-btn" style="background-color:#ffffff; border-radius:40px; border-collapse:separate !important; border-spacing:0;">
                       <tr>
-                        <td align="center" style="padding:28px 22px 30px;">
-                          <p class="body-copy" style="margin:0; color:#5d7da8; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:17px; line-height:1.6; font-weight:500; text-align:center;">تمويل يصل إلى</p>
-                          <p class="amount-figure brand-blue" style="margin:6px 0 0; color:#07439b; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:52px; line-height:1.2; font-weight:700; text-align:center; direction:ltr;">200,000</p>
-                          <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" style="margin:14px auto 0;">
-                            <tr><td bgcolor="#01b3e3" style="width:150px; height:8px; background-color:#01b3e3; border-radius:8px; font-size:0; line-height:0;">&nbsp;</td></tr>
-                          </table>
-                          <p class="brand-blue" style="margin:14px 0 0; color:#07439b; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:26px; line-height:1.4; font-weight:700; text-align:center;">ريال</p>
+                        <td align="center" style="padding:17px 62px;">
+                          <a href="https://alraedah.sa" target="_blank" rel="noopener" style="display:block; color:#07439b; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:20px; line-height:1.4; font-weight:700; text-decoration:none; white-space:nowrap;">قدّم الآن</a>
                         </td>
                       </tr>
                     </table>
                   </td>
                 </tr>
 
-                <!-- CTA -->
+                <!-- footer on navy -->
                 <tr>
-                  <td class="content-gutter white-surface" bgcolor="#ffffff" style="padding:30px 44px 0; background-color:#ffffff;">
-                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#07439b" class="cta-btn" style="width:100%; background-color:#07439b; border-radius:40px; border-collapse:separate !important; border-spacing:0;">
-                      <tr>
-                        <td align="center" style="padding:18px 20px;">
-                          <a href="https://alraedah.sa" target="_blank" rel="noopener" style="display:block; color:#ffffff; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:20px; line-height:1.4; font-weight:700; text-decoration:none;">قدّم الآن</a>
-                        </td>
-                      </tr>
-                    </table>
+                  <td align="center" class="gutter" style="padding:52px 26px 0;">
+                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td style="border-top:1px solid rgba(255,255,255,0.16); font-size:0; line-height:0;">&nbsp;</td></tr></table>
                   </td>
                 </tr>
-
-                <!-- Footer -->
                 <tr>
-                  <td class="content-gutter white-surface footer-copy" bgcolor="#ffffff" style="padding:46px 26px 10px; background-color:#ffffff; color:#4f76ab; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:11px; line-height:1.8; font-weight:500; text-align:center;">
-                    <p style="margin:0 0 8px; color:#4f76ab; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:11px; line-height:1.8; font-weight:500; text-align:center;">
+                  <td align="center" class="gutter" style="padding:20px 26px 0;">
+                    <p class="foot-link" style="margin:0 0 10px; color:#a9c9ee; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:11px; line-height:1.8; font-weight:500; text-align:center;">
                       خاضعة لرقابة وإشراف البنك المركزي السعودي&nbsp;&nbsp;•&nbsp;&nbsp;تطبق الشروط والأحكام
                     </p>
                     <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" dir="ltr" style="margin:0 auto; border-collapse:collapse !important;">
                       <tr>
                         <td class="social-cell" style="padding:0 5px; white-space:nowrap;">
                           <table role="presentation" border="0" cellspacing="0" cellpadding="0"><tr>
-                            <td style="padding:0 4px 0 0;"><a href="https://alraedah.sa" aria-label="Alraedah website"><img src="assets/website.svg" width="15" height="15" alt="" class="social-icon" style="display:block; width:15px; height:15px;"></a></td>
-                            <td class="social-label" style="font-family:Arial,Tahoma,sans-serif; font-size:10.5px; line-height:1.4;"><a href="https://alraedah.sa" style="color:#3479bc; text-decoration:none;">alraedah.sa</a></td>
+                            <td style="padding:0 4px 0 0;"><a href="https://alraedah.sa" aria-label="Alraedah website"><img src="assets/website-onnavy.svg" width="15" height="15" alt="" style="display:block; width:15px; height:15px;"></a></td>
+                            <td class="social-label" style="font-family:Arial,Tahoma,sans-serif; font-size:10.5px; line-height:1.4;"><a href="https://alraedah.sa" class="foot-link" style="color:#a9c9ee; text-decoration:none;">alraedah.sa</a></td>
                           </tr></table>
                         </td>
                         <td class="social-cell" style="padding:0 5px; white-space:nowrap;">
                           <table role="presentation" border="0" cellspacing="0" cellpadding="0"><tr>
-                            <td style="padding:0 4px 0 0;"><a href="https://x.com/alraedahFinance" aria-label="Alraedah on X"><img src="assets/x-official-blue-vector.svg" width="15" height="15" alt="" class="social-icon" style="display:block; width:15px; height:15px;"></a></td>
-                            <td class="social-label" style="font-family:Arial,Tahoma,sans-serif; font-size:10.5px; line-height:1.4;"><a href="https://x.com/alraedahFinance" style="color:#3479bc; text-decoration:none;">alraedahFinance</a></td>
+                            <td style="padding:0 4px 0 0;"><a href="https://x.com/alraedahFinance" aria-label="Alraedah on X"><img src="assets/x-official-onnavy.svg" width="15" height="15" alt="" style="display:block; width:15px; height:15px;"></a></td>
+                            <td class="social-label" style="font-family:Arial,Tahoma,sans-serif; font-size:10.5px; line-height:1.4;"><a href="https://x.com/alraedahFinance" class="foot-link" style="color:#a9c9ee; text-decoration:none;">alraedahFinance</a></td>
                           </tr></table>
                         </td>
                         <td class="social-cell" style="padding:0 5px; white-space:nowrap;">
                           <table role="presentation" border="0" cellspacing="0" cellpadding="0"><tr>
-                            <td style="padding:0 4px 0 0;"><a href="https://www.instagram.com/alraedah.finance.sa/" aria-label="Alraedah on Instagram"><img src="assets/instagram.svg" width="15" height="15" alt="" class="social-icon" style="display:block; width:15px; height:15px;"></a></td>
-                            <td class="social-label" style="font-family:Arial,Tahoma,sans-serif; font-size:10.5px; line-height:1.4;"><a href="https://www.instagram.com/alraedah.finance.sa/" style="color:#3479bc; text-decoration:none;">alraedah.finance.sa</a></td>
+                            <td style="padding:0 4px 0 0;"><a href="https://www.instagram.com/alraedah.finance.sa/" aria-label="Alraedah on Instagram"><img src="assets/instagram-onnavy.svg" width="15" height="15" alt="" style="display:block; width:15px; height:15px;"></a></td>
+                            <td class="social-label" style="font-family:Arial,Tahoma,sans-serif; font-size:10.5px; line-height:1.4;"><a href="https://www.instagram.com/alraedah.finance.sa/" class="foot-link" style="color:#a9c9ee; text-decoration:none;">alraedah.finance.sa</a></td>
                           </tr></table>
                         </td>
                         <td class="social-cell" style="padding:0 5px; white-space:nowrap;">
                           <table role="presentation" border="0" cellspacing="0" cellpadding="0"><tr>
-                            <td style="padding:0 4px 0 0;"><a href="tel:8001249000" aria-label="Call Alraedah"><img src="assets/phone.svg" width="15" height="15" alt="" class="social-icon" style="display:block; width:15px; height:15px;"></a></td>
-                            <td class="social-label" style="font-family:Arial,Tahoma,sans-serif; font-size:10.5px; line-height:1.4;"><a href="tel:8001249000" style="color:#3479bc; text-decoration:none;">8001249000</a></td>
+                            <td style="padding:0 4px 0 0;"><a href="tel:8001249000" aria-label="Call Alraedah"><img src="assets/phone-onnavy.svg" width="15" height="15" alt="" style="display:block; width:15px; height:15px;"></a></td>
+                            <td class="social-label" style="font-family:Arial,Tahoma,sans-serif; font-size:10.5px; line-height:1.4;"><a href="tel:8001249000" class="foot-link" style="color:#a9c9ee; text-decoration:none;">8001249000</a></td>
                           </tr></table>
                         </td>
                       </tr>
@@ -185,10 +167,11 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="white-surface footer-department" bgcolor="#ffffff" align="center" style="padding:8px 26px 26px; background-color:#ffffff; color:#7d8fa4; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:12px; line-height:1.7; font-weight:500; text-align:center;">
-                    شركة الرائدة للتمويل
+                  <td align="center" class="gutter" style="padding:12px 26px 40px;">
+                    <p class="foot-link" style="margin:0; color:#7fa4d4; font-family:'Ping AR',Tahoma,Arial,sans-serif; font-size:12px; line-height:1.7; font-weight:500; text-align:center;">شركة الرائدة للتمويل</p>
                   </td>
                 </tr>
+
               </table>
             </td>
           </tr>

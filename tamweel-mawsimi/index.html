@@ -1,44 +1,258 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light dark">
-  <title>حملة التمويل الموسمي — خيارات الإيميل</title>
-  <style>
-    :root { color-scheme:light dark; }
-    body { margin:0; padding:40px 20px; background:#eef3fb; color:#25282d; font-family:Tahoma,Arial,sans-serif; direction:rtl; }
-    .box { max-width:640px; margin:0 auto; background:#fff; border:1px solid #e2ebf7; border-radius:24px; padding:36px 34px; box-shadow:0 16px 36px rgba(7,67,155,.06); }
-    h1 { margin:0 0 6px; color:#07439b; font-size:26px; }
-    p.sub { margin:0 0 26px; color:#5d7da8; font-size:15px; line-height:1.8; }
-    a.opt { display:block; margin:0 0 14px; padding:18px 22px; border:1px solid #d5e4f3; border-radius:16px; background:#f8fbff; text-decoration:none; }
-    a.opt strong { display:block; color:#07439b; font-size:18px; margin-bottom:5px; }
-    a.opt span { color:#52627a; font-size:14px; line-height:1.7; }
-    @media (prefers-color-scheme:dark) {
-      body { background:#0b1727; }
-      .box { background:#fff; }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>حملة التمويل الموسمي | خيارات الإيميل</title>
+<style>
+  @font-face { font-family:"Ping AR"; src:url("fonts/PingAR-Regular.otf") format("opentype"); font-weight:400; font-display:swap; }
+  @font-face { font-family:"Ping AR"; src:url("fonts/PingAR-Medium.otf") format("opentype"); font-weight:500; font-display:swap; }
+  @font-face { font-family:"Ping AR"; src:url("fonts/PingAR-Bold.otf") format("opentype"); font-weight:700; font-display:swap; }
+
+  :root {
+    color-scheme: light dark;
+    --bg: #e9eef7;
+    --surface: #ffffff;
+    --bar: rgba(255,255,255,0.82);
+    --ink: #0e1b2e;
+    --ink-soft: #5d7da8;
+    --brand: #07439b;
+    --cyan: #01b3e3;
+    --hairline: oklch(0 0 0 / 0.10);
+    --lift: 0 1px 2px rgba(7,67,155,0.05), 0 6px 16px rgba(7,67,155,0.06), 0 20px 40px rgba(7,67,155,0.07);
+    --ease: cubic-bezier(0.2, 0, 0, 1);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #070f1c;
+      --surface: #0f1d31;
+      --bar: rgba(15,29,49,0.82);
+      --ink: #eaf1fb;
+      --ink-soft: #8fa9c9;
+      --brand: #6ea8ff;
+      --hairline: oklch(1 0 0 / 0.10);
+      --lift: 0 1px 2px rgba(0,0,0,0.4), 0 8px 20px rgba(0,0,0,0.4), 0 26px 54px rgba(0,0,0,0.5);
     }
-  </style>
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+  html, body { margin:0; padding:0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Ping AR", Tahoma, Arial, sans-serif;
+    direction: rtl;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---------- sticky nav ---------- */
+  .bar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--bar);
+    backdrop-filter: saturate(180%) blur(14px);
+    box-shadow: 0 1px 0 var(--hairline), 0 6px 20px rgba(7,67,155,0.05);
+  }
+  .bar-in {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .bar-label { font-size: 14px; font-weight: 700; color: var(--ink); margin-inline-end: auto; }
+  .pills { display: flex; gap: 8px; }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 0 16px;
+    border-radius: 999px;
+    background: color-mix(in oklab, var(--brand) 8%, transparent);
+    color: var(--brand);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition-property: background-color, scale;
+    transition-duration: 200ms;
+    transition-timing-function: var(--ease);
+  }
+  .pill:hover { background: color-mix(in oklab, var(--brand) 16%, transparent); }
+  .pill:active { scale: 0.96; transition-duration: 90ms; }
+  .pill:focus-visible { outline: 3px solid var(--cyan); outline-offset: 2px; }
+
+  /* ---------- page ---------- */
+  .shell { max-width: 980px; margin: 0 auto; padding: 48px 20px 96px; }
+
+  .head { margin-bottom: 44px; }
+  .eyebrow {
+    display: inline-block;
+    margin: 0 0 12px;
+    padding: 7px 14px 8px;
+    border-radius: 999px;
+    background: color-mix(in oklab, var(--cyan) 15%, transparent);
+    color: var(--cyan);
+    font-size: 13px;
+    font-weight: 700;
+  }
+  h1 { margin: 0 0 10px; font-size: 34px; line-height: 1.35; font-weight: 700; }
+  .lede { margin: 0; max-width: 64ch; font-size: 16px; line-height: 1.85; color: var(--ink-soft); font-weight: 500; text-wrap: pretty; }
+
+  /* ---------- option block. outer 26, padding 10, inner 16 ---------- */
+  .option {
+    padding: 10px;
+    border-radius: 26px;
+    background: var(--surface);
+    box-shadow: var(--lift);
+    margin-bottom: 34px;
+    opacity: 0;
+    animation: rise 520ms var(--ease) forwards;
+  }
+  .option:nth-of-type(1) { animation-delay: 60ms; }
+  .option:nth-of-type(2) { animation-delay: 160ms; }
+  .option:nth-of-type(3) { animation-delay: 260ms; }
+  @keyframes rise { from { opacity:0; translate: 0 14px; } to { opacity:1; translate: 0 0; } }
+
+  .option-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 14px 16px 18px;
+  }
+  .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; height: 30px;
+    border-radius: 999px;
+    background: var(--brand);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    align-self: center;
+  }
+  .option-title { margin: 0; font-size: 19px; font-weight: 700; line-height: 1.5; }
+  .option-desc { margin: 0; flex-basis: 100%; font-size: 14.5px; line-height: 1.8; color: var(--ink-soft); font-weight: 500; text-wrap: pretty; }
+
+  .stage {
+    border-radius: 16px;
+    overflow: hidden;
+    background: #eef3fb;
+    outline: 1px solid var(--hairline);
+    outline-offset: -1px;
+  }
+  .stage iframe {
+    display: block;
+    width: 100%;
+    height: 1100px;
+    border: 0;
+    background: transparent;
+  }
+
+  .note { margin: 8px 0 0; font-size: 13.5px; line-height: 1.9; color: var(--ink-soft); font-weight: 500; }
+
+  @media (max-width: 560px) {
+    .shell { padding: 32px 12px 64px; }
+    h1 { font-size: 26px; }
+    .option { padding: 8px; border-radius: 22px; }
+    .stage { border-radius: 14px; }
+    .bar-label { flex-basis: 100%; margin-bottom: 2px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .option { animation: none; opacity: 1; }
+    .pill { transition-duration: 1ms; }
+  }
+</style>
 </head>
 <body>
-  <div class="box">
-    <h1>حملة التمويل الموسمي — خيارات الإيميل</h1>
-    <p class="sub">ثلاثة خيارات لنفس المحتوى المعتمد. اختر الخيار المفضل أو اطلب تعديلاً على أحدها.</p>
 
-    <a class="opt" href="../tamweel-mawsimi-v1/">
-      <strong>الخيار الأول — هيدر أزرق بالمفتاح البصري</strong>
-      <span>العنوان داخل بلوك أزرق مطابق للـ Key Visual، ثم بطاقة المبلغ وزر التقديم على خلفية بيضاء.</span>
-    </a>
-
-    <a class="opt" href="../tamweel-mawsimi-v2/">
-      <strong>الخيار الثاني — أبيض بالكامل ومتمركز</strong>
-      <span>الأقرب لإيميلات الرائدة السابقة: لوجو في الأعلى، عنوان أزرق، شريط مبلغ أزرق، وزر تركوازي.</span>
-    </a>
-
-    <a class="opt" href="../tamweel-mawsimi-v3/">
-      <strong>الخيار الثالث — بلوك عرض أزرق سفلي</strong>
-      <span>مقدمة بيضاء مختصرة، ثم بلوك أزرق كامل العرض يجمع المبلغ وزر التقديم في مكان واحد.</span>
-    </a>
+<nav class="bar">
+  <div class="bar-in">
+    <span class="bar-label">حملة التمويل الموسمي</span>
+    <div class="pills">
+      <a class="pill" href="#o1">الخيار 1</a>
+      <a class="pill" href="#o2">الخيار 2</a>
+      <a class="pill" href="#o3">الخيار 3</a>
+    </div>
   </div>
+</nav>
+
+<main class="shell">
+  <header class="head">
+    <span class="eyebrow">مراجعة تصاميم الإيميل</span>
+    <h1>ثلاثة اتجاهات مختلفة لنفس الرسالة</h1>
+    <p class="lede">المحتوى واحد ومعتمد في الثلاثة. الاختلاف في الاتجاه البصري بالكامل: بوستر أزرق، أو تصميم تايبوغرافي هادئ، أو بانر سماوي بشريط تنفيذ. اختر اتجاهاً أو اطلب تعديلاً عليه.</p>
+  </header>
+
+  <section class="option" id="o1">
+    <div class="option-head">
+      <span class="num">1</span>
+      <h2 class="option-title">بوستر أزرق كامل</h2>
+      <p class="option-desc">الإيميل كله باللون الأزرق مثل المفتاح البصري للحملة تماماً. لوجو أبيض، رقم ضخم مع شريط سماوي، وزر أبيض. الأقوى بصرياً والأقرب للإعلان.</p>
+    </div>
+    <div class="stage"><iframe src="../tamweel-mawsimi-v1/" title="الخيار الأول: بوستر أزرق كامل"></iframe></div>
+  </section>
+
+  <section class="option" id="o2">
+    <div class="option-head">
+      <span class="num">2</span>
+      <h2 class="option-title">تايبوغرافي هادئ بمحاذاة يمين</h2>
+      <p class="option-desc">أبيض بالكامل بدون أي بلوكات ملونة. كل شيء بمحاذاة اليمين، والمبلغ مكتوب كنص كبير تحته خط سماوي بدل البطاقات، وزر بإطار فقط. الأقرب لطابع رسالة رسمية.</p>
+    </div>
+    <div class="stage"><iframe src="../tamweel-mawsimi-v2/" title="الخيار الثاني: تايبوغرافي هادئ"></iframe></div>
+  </section>
+
+  <section class="option" id="o3">
+    <div class="option-head">
+      <span class="num">3</span>
+      <h2 class="option-title">بانر سماوي وشريط تنفيذ</h2>
+      <p class="option-desc">الرسالة داخل بلوك سماوي فاتح، والمبلغ داخل صندوق بإطار سماوي، وزر التقديم شريط أزرق ممتد من حافة لحافة. الأوضح في توجيه الضغطة.</p>
+    </div>
+    <div class="stage"><iframe src="../tamweel-mawsimi-v3/" title="الخيار الثالث: بانر سماوي وشريط تنفيذ"></iframe></div>
+  </section>
+
+  <p class="note">كل خيار معروض بحجمه الحقيقي (600 بكسل). الوضع الفاتح والداكن يتبعان إعداد جهازك.</p>
+</main>
+
+<script>
+  // Size each embedded email to its real height so nothing is cropped.
+  // Measure the email's outer table, not body.scrollHeight: the email sets
+  // min-height:100% on body, so body always reports the iframe's own height
+  // back and the box never shrinks.
+  function fit(frame) {
+    try {
+      var d = frame.contentDocument;
+      if (!d || !d.body) return;
+      var t = d.body.querySelector("table");
+      if (!t) return;
+      var h = Math.ceil(t.getBoundingClientRect().height);
+      var prev = parseInt(frame.style.height, 10) || 0;
+      if (h > 200 && Math.abs(h - prev) > 1) frame.style.height = h + "px";
+    } catch (e) { /* leave the fallback height */ }
+  }
+  var frames = Array.prototype.slice.call(document.querySelectorAll(".stage iframe"));
+  function fitAll() { frames.forEach(fit); }
+
+  frames.forEach(function (f) { f.addEventListener("load", fitAll); });
+
+  // a frame can finish loading before this script attaches its listener, so
+  // poll briefly instead of trusting the load event alone. webfonts also
+  // change the height after first paint.
+  var until = Date.now() + 6000;
+  var timer = setInterval(function () {
+    fitAll();
+    if (Date.now() > until) clearInterval(timer);
+  }, 250);
+
+  window.addEventListener("resize", fitAll);
+</script>
+
 </body>
 </html>
