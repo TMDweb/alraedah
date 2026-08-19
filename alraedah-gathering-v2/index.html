@@ -82,11 +82,11 @@ body{font-family:Ping,system-ui,sans-serif;padding:34px 34px 60px;display:flex;f
 
 /* ---------- slide 2 : Pinterest glass timeline ---------- */
 .slide:nth-of-type(2){
-  background:var(--pdf-blue);
+  background:var(--white);
 }
 .slide:nth-of-type(2)::after,.slide:nth-of-type(3)::after,.slide:nth-of-type(4)::after{opacity:0}
-.slide:nth-of-type(2) .shead h2{color:var(--white)}
-.slide:nth-of-type(2) .shead-bone{filter:brightness(0) invert(1)}
+.slide:nth-of-type(2) .shead h2{color:var(--navy)}
+.slide:nth-of-type(2) .shead-bone{filter:none}
 .toc-grid{
   display:grid;grid-template-columns:1fr;grid-template-rows:repeat(4,1fr);
   gap:1.0417cqw;max-width:70.8333cqw;margin:0 auto;padding:.5208cqw 0 .5208cqw 6.25cqw;
@@ -94,7 +94,7 @@ body{font-family:Ping,system-ui,sans-serif;padding:34px 34px 60px;display:flex;f
 }
 .toc-grid::before{
   content:"";position:absolute;right:2.6042cqw;top:1.0417cqw;bottom:1.0417cqw;width:.1042cqw;
-  background:rgba(255,255,255,.42);box-shadow:0 0 1.0417cqw rgba(62,127,187,.28);
+  background:rgba(7,67,155,.28);box-shadow:0 0 1.0417cqw rgba(62,127,187,.18);
 }
 .toc-card{
   background:var(--pdf-card);border:.0521cqw solid rgba(255,255,255,.20);border-radius:.5208cqw;
@@ -163,7 +163,7 @@ body{font-family:Ping,system-ui,sans-serif;padding:34px 34px 60px;display:flex;f
 }
 .goal-txt h3{font-size:1.6667cqw;font-weight:700;color:#fff;line-height:1.4;margin-bottom:.625cqw}
 .goal-txt p{font-size:1.25cqw;font-weight:300;line-height:1.65;color:var(--hair)}
-.goal-num{position:absolute;right:1.0417cqw;top:1.0417cqw;z-index:4;display:flex;align-items:center;justify-content:center;min-width:3.0208cqw;height:2.0833cqw;padding:0 .625cqw;border-radius:.4167cqw;background:var(--sky);border:.0521cqw solid var(--white);box-shadow:0 .4167cqw .9375cqw -.4167cqw rgba(25,37,64,.70);color:#fff;font-size:1.0417cqw;font-weight:800;line-height:1;letter-spacing:.0521cqw}
+.goal-num{display:none}
 
 /* ---------- slide 5 : topics only ---------- */
 .topic-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:1.5625cqw}
@@ -270,13 +270,12 @@ body{font-family:Ping,system-ui,sans-serif;padding:34px 34px 60px;display:flex;f
   .kv p{font-size:clamp(14px,3.6vw,16px);line-height:1.7}
   /* slide 4 image-led cards */
   .slide:nth-of-type(4)::before{top:94px;right:20px;left:20px;height:2px}
-  .s4{display:flex;flex-direction:column;gap:16px;padding-top:12px}
+  .s4{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding-top:12px}
   .goal-row{flex:none;border-radius:16px}
-  .goal-photo{width:100%;height:230px;border-bottom-width:3px}
-  .goal-txt{min-height:126px;padding:22px}
-  .goal-txt h3{font-size:clamp(18px,4.8vw,22px);margin-bottom:7px}
-  .goal-txt p{font-size:clamp(14px,3.7vw,17px);line-height:1.65}
-  .goal-num{right:14px;top:14px;min-width:43px;height:31px;padding:0 10px;border-radius:7px;font-size:14px;box-shadow:0 7px 16px -8px rgba(8,26,62,.72)}
+  .goal-photo{width:100%;height:150px;border-bottom-width:3px}
+  .goal-txt{min-height:142px;padding:15px 14px}
+  .goal-txt h3{font-size:clamp(16px,2.6vw,19px);margin-bottom:7px}
+  .goal-txt p{font-size:clamp(12px,2vw,15px);line-height:1.6}
 
   /* slide 5 */
   .topic-grid{display:flex;flex-direction:column;gap:12px}
@@ -301,6 +300,15 @@ body{font-family:Ping,system-ui,sans-serif;padding:34px 34px 60px;display:flex;f
   .person-grid{grid-template-columns:1fr}
   .person-photo{height:210px}
   .toc-ic{width:44px}
+}
+
+@media (max-width:600px){
+  .s4{grid-template-columns:1fr;gap:12px}
+  .goal-row{flex-direction:row;min-height:126px}
+  .goal-photo{width:42%;height:auto;min-height:126px;border-bottom:0;border-inline-end:3px solid var(--sky)}
+  .goal-txt{min-height:0;padding:15px 16px}
+  .goal-txt h3{font-size:clamp(16px,4.5vw,19px);margin-bottom:6px}
+  .goal-txt p{font-size:clamp(13px,3.7vw,15px);line-height:1.55}
 }
 
 .vswitch{
@@ -335,7 +343,7 @@ body{font-family:Ping,system-ui,sans-serif;padding:34px 34px 60px;display:flex;f
   <div class="cover-inner">
     <div class="cover-top"><img class="logo" src="assets/alraedah-logo-white.svg" alt="الرائدة للتمويل"></div>
     <div class="cover-text">
-      <h1>لقاء<br>الرائدة</h1>
+      <h1>لقاء<br>الرائـدة</h1>
       <span class="rule"></span>
       <p>منصة حوارية دورية لرواد الأعمال والمستثمرين وصناع القرار</p>
     </div>
