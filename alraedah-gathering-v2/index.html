@@ -127,8 +127,8 @@ body{font-family:Ping,system-ui,sans-serif;padding:34px 34px 60px;display:flex;f
 .intro p:first-child{color:var(--white);font-weight:400}
 .intro strong{font-weight:700;color:#9ADCF5}
 .s3-row{flex:1;display:flex;gap:1.5625cqw;min-height:0}
-.s3-col{flex:1;display:flex;flex-direction:row;gap:1.5625cqw}
-.kv{flex:1;padding:2.0833cqw 2.3958cqw;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:.7292cqw;background:var(--pdf-card);border-color:rgba(62,127,187,.58);box-shadow:0 1.875cqw 3.6458cqw -1.3542cqw rgba(0,10,39,.96),0 .4167cqw 1.1458cqw -.2604cqw rgba(0,10,39,.72),inset 0 .0521cqw 0 rgba(255,255,255,.10)}
+.s3-col{flex:1;display:flex;flex-direction:row;align-items:center;gap:1.5625cqw}
+.kv{flex:1;height:18.75cqw;min-height:18.75cqw;padding:1.5625cqw 2.3958cqw;display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start;gap:.7292cqw;background:var(--pdf-card);border-color:rgba(62,127,187,.58);box-shadow:0 1.875cqw 3.6458cqw -1.3542cqw rgba(0,10,39,.96),0 .4167cqw 1.1458cqw -.2604cqw rgba(0,10,39,.72),inset 0 .0521cqw 0 rgba(255,255,255,.10)}
 .kv-icon{width:4.2708cqw;height:4.2708cqw;display:flex;align-items:center;justify-content:center;margin-bottom:.5208cqw;padding:0;border-radius:0;background:transparent;border:0;box-shadow:none}
 .kv-icon img{width:3.75cqw;height:3.75cqw;display:block;object-fit:contain}
 .kv h3{font-size:1.7708cqw;font-weight:700;color:var(--white)}
@@ -259,10 +259,10 @@ body{font-family:Ping,system-ui,sans-serif;padding:34px 34px 60px;display:flex;f
 
   /* slide 3 */
   .s3,.s3-row{flex-direction:column;gap:14px}
-  .s3-col{flex:none;width:100%;flex-direction:column}
+  .s3-col{flex:none;width:100%;flex-direction:column;align-items:stretch}
   .intro{padding:4px 2px 20px;grid-template-columns:1fr;gap:10px}
   .intro p{font-size:clamp(15px,3.9vw,18px);line-height:1.75}
-  .kv{padding:22px;gap:10px;box-shadow:0 24px 44px -22px rgba(0,10,39,.96),0 7px 18px -7px rgba(0,10,39,.72)}
+  .kv{height:auto;min-height:0;padding:22px;gap:10px;box-shadow:0 24px 44px -22px rgba(0,10,39,.96),0 7px 18px -7px rgba(0,10,39,.72)}
   .kv-icon{width:52px;height:52px;margin-bottom:4px;border-radius:0;box-shadow:none}
   .kv-icon img{width:46px;height:46px}
   .slide:nth-of-type(3) .shead-ic,.slide:nth-of-type(4) .shead-ic{width:58px;height:58px}
